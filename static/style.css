@@ -1,0 +1,282 @@
+body {
+    background-image: url(img/back.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 25%;
+    height: 135vh; 
+    margin: 0; 
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+#headerRow{
+    text-align: center;
+    margin-top: 20px;
+    font-family: "Noto Sans" ,sans-serif;
+}
+#searchRow{
+    display: flex;
+    justify-content: center;
+}
+
+/*Initially the resutls section is hidden*/
+#searchBar{
+    border-radius: 50px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+    width: 580px;
+    height: fit-content;
+    display: flex;
+    align-items: center; /*aliging items horizontally in a row*/
+    justify-content: center;
+    background-color: #fff;
+}
+
+#stockButton{
+    background-image: url('img/search-solid.svg');
+    background-repeat: no-repeat;
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+#clearButton{
+    background-image: url('img/times-solid.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+#stockButton:hover, #clearButton:hover{
+    background-color: #797979;
+    border-radius: 10px;
+}
+#stockSearch{
+    padding: 0;
+    border: 0;
+    color: #585858;
+    width: 450px;
+    height: 50px;
+    margin: 0 10px;
+    border-right: 1px solid #C8C8C8;
+}
+
+#tabsContainer {
+    font-family: "Noto Sans";
+    background-color: #F5F5F5;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.tabs {
+    display: flex;
+    margin-top: 50px;
+}
+
+.tab{
+    cursor: pointer;
+    height: 50px;
+    width: fit-content;
+    display: flex; /*vertical align of text in tab when used with align-items*/
+    align-items: center;
+    padding: 0 10px;
+}
+.company-active{
+    text-align: center;
+}
+.tab.active{
+    background-color: #A0A0A0;
+}
+
+.tab:hover {
+    background-color: #D0D0D0;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+[data-tab-content]{
+    display: none;
+}
+
+.active[data-tab-content] {
+    display: block; /*makes it visible*/
+}
+#results {
+    display: none;
+    margin-top: 200px;
+}
+#error-row{
+    display: flex;
+    justify-content: center;
+}
+#error {
+    display: none;
+    margin-top: 250px;
+}
+
+#error-div{
+    background-color: #C8C8C8;
+    border-radius: 10px;
+    width: 600px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+#company-logo{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    height: 100px;
+}
+#company-table-row{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+#company-table-row td{
+    padding: 5px 5px;
+    width: 300px;
+    border-collapse: collapse;
+    border-top: 1px solid #C8C8C8;
+    border-bottom: 1px solid #C8C8C8;
+}
+#company-table-row td:first-child {
+    text-align: right;
+    font-weight: bold;
+}
+#company-table-row table{
+    border-collapse: collapse;
+    border-top: 1px solid #C8C8C8;
+    border-bottom: 1px solid #C8C8C8;
+}
+#stock-table-row{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#change{
+    margin: 0 2px;
+}
+#dynamic-image-1{
+    width: 10px;
+    height: 10px;
+}
+
+#change-cell-wrapper{
+    display: flex;
+    align-items: center;
+}
+#change-percent{
+    margin: 0 2px;
+}
+#dynamic-image-2{
+    width: 10px;
+    height: 10px;
+}
+
+#change-percent-cell-wrapper{
+    display: flex;
+    align-items: center;
+}
+#stock-summary td{
+    padding: 5px 5px;
+}
+#stock-summary table, #stock-summary td{
+    border-collapse: collapse;
+    border-top: 1px solid #C8C8C8;
+    border-bottom: 1px solid #C8C8C8;
+}
+#stock-summary td:first-child {
+    text-align: right;
+    font-weight: bold;
+}
+#recommendation-trends-div{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+#recommendation-trends{
+    display: flex;
+    width: 300px;
+    align-items: center;
+}
+#strong-sell-text {
+    text-align: center;
+    color: #cc2836;
+}
+#strong-sell{
+    background-color: #cc2836;
+    padding: 5px 10px;
+    color: #fff;
+}
+#sell{
+    background-color: #9c5c44;
+    padding: 5px 10px;
+    color: #fff
+}
+#hold{
+    background-color: #748456;
+    padding: 5px 10px;
+    color: #fff
+}
+#buy{
+    background-color: #34ac64;
+    padding: 5px 10px;
+    color: #fff
+}
+#strong-buy{
+    background-color: #0cdc74;
+    padding: 5px 10px;
+    color: #fff
+}
+#strong-buy-text {
+    text-align: center;
+    color: #0cdc74;
+
+}
+#trends-caption{
+    text-align: center;
+}
+#chart-row{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#chart-container {
+    width: 700px;
+    height: fit-content;
+}
+#data-news-image {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+.news-row {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.news-div {
+    width: 700px;
+    background-color: #F5F5F5;
+    display: flex;
+}
+.news-text-wrapper {
+    margin-top: 10px;
+  }
+#news-headline{
+    font-weight: bold;
+}

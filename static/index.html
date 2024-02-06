@@ -1,0 +1,143 @@
+<html>
+    <head>
+        <title>Sample app</title>
+
+        <script src="https://code.highcharts.com/stock/highstock.js"></script>
+        <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
+        <script src="https://code.highcharts.com/stock/modules/accessibility.js"></script>
+
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="style.css">
+
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&display=swap" rel="stylesheet">
+    </head>
+<body>
+    
+        <h1 id="headerRow">Stock Search</h1>
+        <!-- Search Stock Form -->
+        <div id="searchRow">
+            <form id="stockForm">
+                <div id="searchBar">
+                    <button id="stockButton" type="submit"></button>
+                    <input type="text" id="stockSearch" placeholder="Enter Stock Ticker Symbol" required>
+                    <button id="clearButton" type="button"></button>
+                </div>
+            </form>
+        </div>
+        <div id="error-row">
+            <div id="error">
+                <div id="error-div">Error: No record has been found, please enter a valid symbol</div>
+            </div>
+        </div>
+        
+        <!-- Results Section-->
+        <div id="results">
+            <div id="tabRow">
+                <div id="tabsContainer">
+                    <ul class="tabs">
+                        <li data-tab-target="#company" class="tab active">Company</li>
+                        <li data-tab-target="#stock-summary" class="tab">Stock Summary</li>
+                        <li data-tab-target="#charts" class="tab">Charts</li>
+                        <li data-tab-target="#latest-news" class="tab">Latest News</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-content">
+                <div id="company" data-tab-content class="active">
+                    <div id="company-logo"></div>
+                    <div id="company-table-row">
+                        <table>
+                        <tr>
+                            <td>Company Name</td>
+                            <td id="company-name"></td>
+                        </tr>
+                        <tr>
+                            <td>Stock Ticker Symbol</td>
+                            <td id="stock-ticker-symbol-company"></td>
+                        </tr>
+                        <tr>
+                            <td>Stock Exchange Code</td>
+                            <td id="stock-exchange-code"></td>
+                        </tr>
+                        <tr>
+                            <td>Company Start Date</td>
+                            <td id="company-start-date"></td>
+                        </tr>
+                        <tr>
+                            <td>Category</td>
+                            <td id="category"></td>
+                        </tr>
+                    </table>
+                    </div>
+                    
+                </div>
+
+                <div id="stock-summary" data-tab-content>
+                    <div id="stock-table-row">
+                        <table>
+                            <tr>
+                                <td>Stock Ticker Symbol</td>
+                                <td id="stock-ticker-symbol-summary"></td>
+                            </tr>
+                            <tr>
+                                <td>Trending Day</td>
+                                <td id="trading-day"></td>
+                            </tr>
+                            <tr>
+                                <td>Previous Closing Price</td>
+                                <td id="previous-closing-price"></td>
+                            </tr>
+                            <tr>
+                                <td>Opening Price</td>
+                                <td id="opening-price"></td>
+                            </tr>
+                            <tr>
+                                <td>High Price</td>
+                                <td id="high-price"></td>
+                            </tr>
+                            <tr>
+                                <td>Low Price</td>
+                                <td id="low-price"></td>
+                            </tr>
+                            <tr>
+                                <td>Change</td>
+                                <td id="change-cell">
+                                    <div id="change-cell-wrapper"><p id="change"></p><div id="dynamic-image-container-1"><img src="" alt="Dynamic Image 1" id="dynamic-image-1"></div></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Change Percent</td>
+                                <td id="change-percent-cell">
+                                    <div id="change-percent-cell-wrapper"><p id="change-percent"></p><div id="dynamic-image-container-2"><img src="" alt="Dynamic Image 2" id="dynamic-image-2"></div></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div id="recommendation-trends-div">
+                        <ul id="recommendation-trends">
+                            <li id="strong-sell-text">Strong Sell</li>
+                            <li id="strong-sell"></li>
+                            <li id="sell"></li>
+                            <li id="hold"></li>
+                            <li id="buy"></li>
+                            <li id="strong-buy"></li>
+                            <li id="strong-buy-text">Strong Buy</li>
+                        </ul>
+                    </div>
+                    <p id="trends-caption">Recommendation Trends</p>
+                </div>
+
+                <div id="charts" data-tab-content>
+                    <div id="chart-row">
+                        <div id="chart-container"></div>
+                    </div>
+                </div>
+                <div id="latest-news" data-tab-content>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
