@@ -13,6 +13,6 @@ This web application is a single-page application (SPA) designed for searching a
 * Clone this repository to your local machine.
 * Install the necessary dependencies using pip install -r requirements.txt.
 * Run the Flask application by executing python app.py.
-* Access the application through your web browser at http://localhost:5000/index.html.
+* Access the application through your web browser at [http://localhost:5000/index.html](http://127.0.0.1:5000/index.html).
 # Note
 * API Keys: Make sure to replace the placeholder API keys (FINNHUB_API_KEY and POLYGON_API_KEY) with your own keys obtained from Finnhub and Polygon, respectively.
